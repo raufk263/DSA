@@ -1,0 +1,36 @@
+// This is solution in O(n^2).
+// Note- This has issue of time limite exceeded. We will optimise the approach.
+/*
+N = 5, S = 12
+A[] = {1,2,3,7,5}
+Output: 2 4
+Explanation: The sum of elements 
+from 2nd position to 4th position 
+is 12.
+*/
+
+class Solution
+{
+    //Function to find a continuous sub-array which adds up to a given number.
+    static ArrayList<Integer> subarraySum(int[] arr, int n, int s) 
+    {
+        // Your code here
+        int sum;
+        ArrayList<Integer> ans = new ArrayList<>();
+        for(int i=0; i<n; i++){
+            sum=0;
+            for(int j=i; j<n; j++){
+                sum+=arr[j];
+                if(sum==s){
+                    ans.add(i+1);
+                    ans.add(j+1);
+                    return ans;
+                }else if (sum>s){
+                    break;
+                }
+            }
+        }
+        ans.add(-1);
+        return ans;
+    }
+}
