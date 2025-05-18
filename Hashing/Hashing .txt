@@ -1,0 +1,48 @@
+Hashing is a technique used in data structures that efficiently stores and retrieves data in a way that allows for quick access.
+In hashing, we often deal with key-value pairs, just like in a dictionary or map data structure.
+
+Key: A unique identifier used to locate the data (e.g., a student ID).
+
+Value: The actual data associated with the key (e.g., the student's name).
+Hashing takes O(1) complexity for search,insert and Delete as compared to list which takes O(n) time complexity.
+
+Hashing is not useful for :
+	Finding closest value
+	Sorted data
+	Prefix Summary.
+	
+Hashing is Technique but hash table is an data struture.
+
+Application of Hashing
+1. Dictionaries
+2. Database Indexing
+3. Cryptography
+4. Caches (Like in browser, URL is key and it's data is value so when we access that website browsers has our data stored)
+5. Symbol tables in compiler/interpreter
+6. Routers (Names and MAC address mapping uses hashing)
+7. Getting data from databases.
+
+Collision --
+In hashing, a collision occurs when two different inputs (keys) produce the same hash value or index in the hash table. Since a hash function maps keys to indices in a fixed-size table, it's possible for multiple keys to hash to the same location — this is a collision.
+
+Example:
+Suppose we have a hash function:
+hash(key) = key % 10
+
+hash(12) = 12 % 10 = 2
+
+hash(22) = 22 % 10 = 2
+
+Here, both keys 12 and 22 hash to index 2 → this is a collision.
+
+Common Methods to Handle Collisions:
+
+Chaining: Store multiple values at the same index using a linked list.
+
+Open Addressing: Find another empty slot using techniques like:
+
+Linear probing
+
+Quadratic probing
+
+Double hashing
