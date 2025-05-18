@@ -1,3 +1,4 @@
+# A simple dictionary with integer keys
 demo = {1: "one", 2: "two", 3: "three", 4: "four"}
 
 print(demo[1])          # Access value for key 1 → Output: 'one'
@@ -25,6 +26,13 @@ print(demo_countries["Asia"])
 
 del demo_countries["Europe"]   # Delete existing value
 print(demo_countries)
+print("\n")
+print(demo_countries.keys()) # Returns all keys in dictionary.
 
-demo_countries.clear()   # Remove all values
-print(demo_countries)  # Output: {}
+print(demo_countries.values()) # Returns all valuess in dictionary.
+
+# To check if key exists or not
+if "Australia" in demo_countries:
+    print("Exist")
+else:
+    print("Does not exist")
