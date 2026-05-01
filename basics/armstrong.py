@@ -22,3 +22,16 @@ else:
 # An Armstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits.
 # Ex- 153 -> 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 157
 # Ex - 9474 -> 9^4 + 4^4 + 7^4 + 4^4 = 9474.
+
+# Using sting method
+num=n
+total=0
+count_digits =  len(str(n))
+while(num>0):
+    last_digit2=num%10
+    total=total + (last_digit2**count_digits)
+    num=num//10
+if ( total == n):
+    print("Armstrong number")
+else:
+    print("Not an armstrong number")
